@@ -1,0 +1,3 @@
+docker run --name goals-backend --rm --network goals-net -v /home/mishi/gaurav/Maximillian/multi-01-starting-setup/backend:/app -v logs:/app/logs -v /app/node_modules -p 80:80 goals-node
+docker run --name goals-frontend --rm -v /home/mishi/gaurav/Maximillian/multi-01-starting-setup/frontend:/app -v /app/node_modules -p 3000:3000 -it goals-react
+docker run --name mongodb --rm --network goals-net -v data:/data/db -d mongo
